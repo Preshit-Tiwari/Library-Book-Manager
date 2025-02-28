@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class= "table table-hover table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Type</th>
+                <th>Date(time)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                {% if row.type == 'return' %}
+                    <tr> <td>{{ row.bid }}</td> <td>{{ row.bname }}</td> <td id="green-cell">{{ row.type }}</td> <td>{{ row.time }}</td></tr>
+                {% else %}
+                    <tr> <td>{{ row.bid }}</td> <td>{{ row.bname }}</td> <td id="red-cell">{{ row.type }}</td> <td>{{ row.time }}</td></tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

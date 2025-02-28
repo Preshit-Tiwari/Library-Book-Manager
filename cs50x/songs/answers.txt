@@ -1,0 +1,4 @@
+By looking at the average energy, valence, and danceability of a person’s top 100 songs from the past year.
+
+But this way of calculating the 'Audio Aura' is not a perfect way to do so, as people aura may differ in some cases. So another way of doing is to gather
+more data of user listening habbit like 'Genres', etc.

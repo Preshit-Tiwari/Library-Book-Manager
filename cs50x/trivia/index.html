@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkMultiChoice(event)
+            {
+                let button = event.target;
+                if(button.innerHTML == 'RAM and ROM')
+                {
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else
+                {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+
+            function checkFreeResponse(event)
+            {
+                let button =event.target;
+                let input = button.parentElement.querySelector('input');
+
+                if (input.value == '')
+                {
+                    input.style.backgroundColor = 'Green';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else
+                {
+                    input.style.backgroundColor = 'Red';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which among these is Main-Memory in computer?</h3>
+                <button onclick="checkMultiChoice(event)">Floppy Disk</button>
+                <button onclick="checkMultiChoice(event)">Magnetic Tape</button>
+                <button onclick="checkMultiChoice(event)">Hard Disk</button>
+                <button onclick="checkMultiChoice(event)">RAM and ROM</button>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the interacting part of OS?</h3>
+                <input type="text"></input>
+                <button onclick="checkFreeResponse(event)">Check Answer</button>
+                <p class="feedback"></p>
+            </div>
+        </div>
+    </body>
+</html>

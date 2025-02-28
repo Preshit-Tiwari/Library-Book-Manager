@@ -1,0 +1,7 @@
+HTML Tags:
+<nav>, <ul>, <header>, <form>, <a>, <div>, <p>, <img>, <b>, <h2>
+
+CSS Tags:
+border, margin-left, padding, color, background-image
+
+I have used bootstrap and javascript to enhance overall looks and enhacement of the website

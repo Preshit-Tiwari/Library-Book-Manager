@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: This sort takes less time when list is sorted as compared to other cases.
+
+sort2 uses: merge sort
+
+How do you know?: This sort takes least time as the input size grows in all cases.
+
+sort3 uses: selection sort
+
+How do you know?: This sort takes similar time in all cases, which is greater than other sorts.

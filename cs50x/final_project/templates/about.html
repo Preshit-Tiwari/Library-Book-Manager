@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Show Books
+{% endblock %}
+
+{% block main %}
+    {% if success == 1 %}
+        <script>
+            alert("Successful!");
+        </script>
+    {% endif %}
+    <table class= "table table-hover table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                {% if row.available == 'Yes' %}
+                    <tr> <td>{{ row.id }}</td> <td>{{ row.name }}</td> <td id="green-cell">{{ row.available }}</td></tr>
+                {% else %}
+                    <tr> <td>{{ row.id }}</td> <td>{{ row.name }}</td> <td id="red-cell">{{ row.available }}</td></tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

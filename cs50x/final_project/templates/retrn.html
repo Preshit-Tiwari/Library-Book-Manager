@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Return Books
+{% endblock %}
+
+{% block main %}
+    <form action="/retrn" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="book_id" placeholder="Book Id" type="text">
+        </div>
+        <button class="btn btn-primary alert-success" type="submit">Return</button>
+    </form>
+{% endblock %}
